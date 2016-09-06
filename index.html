@@ -1,0 +1,125 @@
+<html ng-app="">
+
+<head>
+    <script src="scripts/angular.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+   
+<div class="content">
+    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Registro de Clientes</h2>
+                                   
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <br />
+                                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input name="nombre" type="text" id="nombre" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellido <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="apellido" name="apellido" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Carnet de Identidad *</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input id="ci" class="form-control col-md-7 col-xs-12" type="text" name="ci">
+                                            </div>
+                                        </div>
+                                        
+                                       
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                                <button type="submit" class="btn btn-primary">Limpiar</button>
+                                                <button onclick="cargarClientes();" type="button" class="btn btn-success">Enviar</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div> 
+<div class="row">
+	<div class="content">
+		  <div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Lista de Clientes</h2>
+                                    
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <table class="table table-striped" id="tabla">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nombre</th>
+                                                <th>Apellido</th>
+                                                <th>Carnet Identidad</th>
+                                                <th>Operacion</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>345345</td>
+                                                <td> <input type="button" value="Eliminar" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/> </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>34556</td>
+                                                <td> <input type="button" value="Eliminar" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/> </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry</td>
+                                                <td>the Bird</td>
+                                                <td>789675</td>
+                                                <td> <input type="button" value="Eliminar" onclick="Eliminar(this.parentNode.parentNode.rowIndex)"/> </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+			</div>
+				
+	</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>
+
+<script src="scripts/procesos.js"></script>
